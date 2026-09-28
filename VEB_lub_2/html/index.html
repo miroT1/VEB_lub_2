@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Управление студентами</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/styles.css"
+    >
+
+    <script
+        type="module"
+        src="/js/index.js"
+    ></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Система "Управление студентами"</h1>
+    </header>
+
+
+    <main>
+
+        <section id="list-section">
+
+            <h2>Список студентов</h2>
+
+
+            <!-- Фильтрация студентов -->
+
+            <form id="filter-form">
+
+                <label>
+                    Группа:
+
+                    <input
+                        type="text"
+                        id="group-filter"
+                        name="group"
+                        placeholder="P3223"
+                    >
+                </label>
+
+
+                <label>
+                    Общежитие:
+
+                    <input
+                        type="number"
+                        id="dormitory-filter"
+                        name="dormitory"
+                        min="1"
+                        placeholder="8"
+                    >
+                </label>
+
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                    >
+                        Фильтровать
+                    </button>
+
+                    <button
+                        type="button"
+                        id="reset-filter-button"
+                        class="btn-cancel"
+                    >
+                        Сбросить
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Таблица студентов -->
+
+            <table id="student-table">
+
+                <thead>
+                    <tr>
+                        <th>ФИО</th>
+                        <th>Группа</th>
+                        <th>ИСУ ID</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+
+                <tbody id="students-tbody">
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <div class="add-button-wrapper">
+
+            <button
+                id="show-add-form-bin"
+                class="form-button"
+                type="button"
+            >
+                Добавить студента
+            </button>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

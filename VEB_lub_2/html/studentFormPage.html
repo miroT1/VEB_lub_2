@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Управление студентом</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/styles.css"
+    >
+
+    <script
+        type="module"
+        src="/js/createUpdateFormOperations.js"
+    ></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Система "Управление студентами"</h1>
+    </header>
+
+
+    <main>
+
+        <section id="form-section">
+
+            <h2 id="form-title">
+                Добавление студента
+            </h2>
+
+
+            <form
+                id="student-form"
+                autocomplete="off"
+            >
+
+                <label>
+                    ФИО:
+
+                    <input
+                        type="text"
+                        id="stu-name"
+                        name="stu-name"
+                        required
+                        placeholder="Иванов Иван Иванович"
+                    >
+                </label>
+
+
+                <label>
+                    Группа:
+
+                    <input
+                        type="text"
+                        id="stu-group"
+                        name="stu-group"
+                        required
+                        placeholder="P3223"
+                    >
+                </label>
+
+
+                <label>
+                    ИСУ ID:
+
+                    <input
+                        type="text"
+                        id="stu-isu"
+                        name="stu-isu"
+                        required
+                        inputmode="numeric"
+                        maxlength="6"
+                    >
+                </label>
+
+
+                <label>
+                    Номер общежития:
+
+                    <input
+                        type="number"
+                        id="stu-hostel"
+                        name="stu-hostel"
+                        min="1"
+                    >
+                </label>
+
+
+                <label>
+                    Комната:
+
+                    <input
+                        type="number"
+                        id="stu-room"
+                        name="stu-room"
+                        min="1"
+                    >
+                </label>
+
+
+                <label>
+                    Срок заселения:
+
+                    <input
+                        type="date"
+                        id="stu-date"
+                        name="stu-date"
+                        min="2000-01-01"
+                        max="2050-01-01"
+                    >
+                </label>
+
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        id="stu-foreign"
+                        name="stu-foreign"
+                    >
+
+                    Является ли иностранцем
+
+                </label>
+
+
+                <label>
+                    Заметки:
+
+                    <textarea
+                        id="stu-notes"
+                        name="stu-notes"
+                        rows="4"
+                    ></textarea>
+                </label>
+
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        id="save-btn"
+                    >
+                        Сохранить
+                    </button>
+
+
+                    <a
+                        href="/"
+                        class="btn-link btn-cancel"
+                    >
+                        Отмена
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

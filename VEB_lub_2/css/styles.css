@@ -1,0 +1,231 @@
+:root {
+    --primary: #007bff;
+    --space: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    padding: var(--space);
+}
+
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+main {
+    width: 100%;
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+.btn-link {
+    display: inline-block;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.875rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.btn-link:hover {
+    filter: brightness(0.9);
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+}
+
+.add-button-wrapper {
+    margin-top: var(--space);
+    text-align: center;
+}
+
+#student-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: white;
+}
+
+#student-table th,
+#student-table td {
+    padding: var(--space);
+    border-bottom: 1px solid #dee2e6;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+#student-table th {
+    background-color: #f1f3f5;
+}
+
+#student-table button {
+    max-width: 100%;
+    margin: 0.25rem 0;
+}
+
+form,
+#student-info {
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 auto var(--space);
+    padding: var(--space);
+    border: 1px solid #dee2e6;
+    border-radius: 0.4rem;
+    background-color: white;
+}
+
+#form-title {
+    text-align: center;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: var(--space);
+}
+
+form input:not([type="checkbox"]),
+form textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form .checkbox-label {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+}
+
+#student-info,
+h1,
+.error-message {
+    overflow-wrap: anywhere;
+}
+
+#student-info p {
+    line-height: 1.5;
+}
+
+#student-notes {
+    white-space: pre-wrap;
+}
+
+@media (max-width: 40em) {
+    #student-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+    }
+
+    #student-table,
+    #student-table tbody,
+    #student-table tr,
+    #student-table td {
+        display: block;
+        width: 100%;
+    }
+
+    #student-table tr {
+        margin-bottom: var(--space);
+        border: 1px solid #dee2e6;
+    }
+
+    #student-table td::before {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    #student-table td:nth-child(1)::before {
+        content: "ФИО:";
+    }
+
+    #student-table td:nth-child(2)::before {
+        content: "Группа:";
+    }
+
+    #student-table td:nth-child(3)::before {
+        content: "ИСУ ID:";
+    }
+
+    #student-table td:nth-child(4)::before {
+        content: "Действия:";
+    }
+
+    .form-buttons > * {
+        width: 100%;
+    }
+}
+
+main > .btn-link {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+}

@@ -1,0 +1,35 @@
+[
+    {
+        "ID": "5e34da53-4401-4319-b3b9-ac6dd4ee1ff7",
+        "fullName": "Петров Мирон Константинович",
+        "group": "P3224",
+        "ISU": "504762",
+        "dormNumber": 3,
+        "room": 10,
+        "dateArrived": "2000-11-01",
+        "isForeign": false,
+        "notes": ""
+    },
+    {
+        "ID": "e912112a-59c4-4dff-b159-3975064e262c",
+        "fullName": "Бебебе Бебеб",
+        "group": "P3223",
+        "ISU": "504763",
+        "dormNumber": 34,
+        "room": 5,
+        "dateArrived": "2007-11-01",
+        "isForeign": true,
+        "notes": "Буйный студент\n"
+    },
+    {
+        "ID": "86702b66-8482-4705-b52c-62fc6d64406f",
+        "fullName": "Иванов Иван",
+        "group": "P3223",
+        "ISU": "504764",
+        "dormNumber": 1229,
+        "room": 12,
+        "dateArrived": "2007-11-01",
+        "isForeign": false,
+        "notes": ""
+    }
+]
